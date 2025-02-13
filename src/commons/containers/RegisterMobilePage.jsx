@@ -2,7 +2,7 @@ import { useAuth } from '@/commons/auth'
 import { Button, InputField } from '@/commons/components'
 import React, { useContext } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { Link, Navigate, useNavigate, useLocation } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useLocation } from "react-router";
 import useAppearanceStore from '@/commons/appearance/store'
 import { MdArrowBack } from 'react-icons/md'
 

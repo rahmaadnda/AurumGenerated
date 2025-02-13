@@ -17,3 +17,9 @@ export const BUTTON_CLASSNAMES = {
   'text-link': 'btn-link',
   'outline-danger': 'btn-outline btn-error'
 }
+
+export const BUTTON_SIZES = {
+  sm: "btn-sm",
+  md: "",
+  lg: "btn-lg",
+}

@@ -1,6 +1,6 @@
 import { Button } from '@/commons/components'
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import DetailUser from '../components/DetailUser'
 import getUserDetail from '../services/getUserDetail'
 

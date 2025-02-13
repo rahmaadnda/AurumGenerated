@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const MenuItem = ({ route, label, subMenus, isCollapsed }) => {
   if (subMenus?.length > 0) {

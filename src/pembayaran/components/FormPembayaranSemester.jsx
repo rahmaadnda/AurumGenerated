@@ -5,7 +5,7 @@
 */
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router";
 import {
   Button,
   Form,
@@ -72,7 +72,7 @@ const FormPembayaranSemester = ({
 		  ]}
 	
 		  itemsEvents={[
-				<Button type="submit" variant="primary">Bayar</Button>
+				<Button key="Bayar" type="submit" variant="primary">Bayar</Button>
 	    ]}
 	  />
   )

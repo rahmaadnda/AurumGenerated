@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router";
 import { MdLogout, MdLogin } from 'react-icons/md'
 import Button from '../Button'
 import useAppearanceStore from '@/commons/appearance/store'

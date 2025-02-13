@@ -1,6 +1,6 @@
 import useAuth from "@/commons/auth";
 import menus, { settingsMenu } from "@/menus";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router";
 
 export default function useNavigation() {
   const { checkPermission, isAuthenticated, logout } = useAuth();

@@ -5,7 +5,7 @@
 */
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router";
 import {
   Button,
   Form,
@@ -72,6 +72,7 @@ const FormUbahKurikulum = ({
 		  formFields={[
 			  
 			  <Controller
+			    key="kode"
 		        name="kode"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -87,6 +88,7 @@ const FormUbahKurikulum = ({
 	,
 			  
 			  <Controller
+			    key="noSK"
 		        name="noSK"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -102,6 +104,7 @@ const FormUbahKurikulum = ({
 	,
 			  
 			  <Controller
+			    key="status"
 		        name="status"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -117,6 +120,7 @@ const FormUbahKurikulum = ({
 	,
 			  
 			  <Controller
+			    key="profilLulusan"
 		        name="profilLulusan"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -133,6 +137,7 @@ const FormUbahKurikulum = ({
 	
 		  
 		  <Controller
+		    key="programStudiId"
 	        name="programStudiId"
 	        control={control}
 	        render={({ field, fieldState }) => (
@@ -151,7 +156,7 @@ const FormUbahKurikulum = ({
 		  ]}
 	
 		  itemsEvents={[
-				<Button type="submit" variant="primary">Simpan</Button>
+				<Button key="Simpan" type="submit" variant="primary">Simpan</Button>
 	    ]}
 	  />
   )

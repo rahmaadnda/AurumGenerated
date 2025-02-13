@@ -6,17 +6,17 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
 import DetailCPL from '../components/DetailCPL'
 import getCPLDataDetail from '../services/getCPLDataDetail'
-import CPMKTable from '../components/CPMKTable'
+import CPMKTable from "../components/CPMKTable";
 
 import getBobot from '../services/getBobot'
 const DetailCPLPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	detailCPL: false,
@@ -63,14 +63,13 @@ return (
 		buttons={
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
-			  	{checkPermission("ReadLaporanCPL") &&  (
-			  	  <Link to={`/cpl
-			  	  `}>	<Button className="p-4 w-full" variant="secondary">
-			  	  	  Kembali
-			  	  	</Button>
-			  	  </Link>
-			  	  
-			  	)}
+			  	<Link to={`/cpl
+			  	`}>
+			  		<Button className="p-4 w-full" variant="secondary">
+			  		  Kembali
+			  		</Button>
+			  	</Link>
+			  	
 			  	
 			  </Layouts.ViewContainerBackButtonLayout>
 			</>

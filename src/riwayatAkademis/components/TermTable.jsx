@@ -4,7 +4,7 @@
 	version 3.5.10
 */
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from "react-router";
 
 import { useAuth } from '@/commons/auth';
 import { Button, Modal } from '@/commons/components';
@@ -74,7 +74,8 @@ const TermTable = ({ termRiwayatAkademisDataList
         itemsEvents={(termItem) => [
           checkPermission("ReadKelasMahasiswaMe") &&  (
             <Link to={`/akademis/riwayat/${termItem.id}`}>
-              <Button 
+              <Button
+            	size="sm"
             	variant=
             		"primary"
               >

@@ -1,6 +1,6 @@
 import { Button } from '@/commons/components'
 import React, { useEffect, useState } from 'react'
-import { Link, useParams, useSearchParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from "react-router";
 
 import getAllowedPermissions from '../services/getAllowedPermissions'
 

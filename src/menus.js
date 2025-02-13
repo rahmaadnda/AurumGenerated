@@ -44,39 +44,9 @@ addMenu({
 })
 
 addMenu({
-	route: '/matakuliah',
-    label: 'Mata Kuliah',
+	route: '/pembayaran',
+    label: 'Pembayaran',
 	subMenus: []
-})
-
-addMenu({
-	route: '/kelas',
-    label: 'Kelas',
-	subMenus: []
-})
-
-addMenu({
-	route: '#',
-    label: 'CPMK',
-	subMenus: []
-})
-
-addSubMenu('CPMK', {
-	route: '/cpmk',
-	label: 'CPMK',
-	
-})
-
-addSubMenu('CPMK', {
-	route: '/subcpmk',
-	label: 'Sub-CPMK',
-	
-})
-
-addSubMenu('CPMK', {
-	route: '/cpmk/laporan',
-	label: 'Laporan CPMK',
-	
 })
 
 addMenu({
@@ -94,6 +64,36 @@ addSubMenu('Akademis', {
 addSubMenu('Akademis', {
 	route: '/akademis/riwayat',
 	label: 'Riwayat',
+	
+})
+
+addMenu({
+	route: '/penilaian-kelas',
+    label: 'Penilaian Kelas',
+	subMenus: []
+})
+
+addMenu({
+	route: '/matakuliah',
+    label: 'Mata Kuliah',
+	subMenus: []
+})
+
+addMenu({
+	route: '#',
+    label: 'CPL',
+	subMenus: []
+})
+
+addSubMenu('CPL', {
+	route: '/cpl',
+	label: 'CPL',
+	
+})
+
+addSubMenu('CPL', {
+	route: '/cpl/laporan',
+	label: 'Laporan CPL',
 	
 })
 
@@ -122,32 +122,26 @@ addSubMenu('IRS', {
 })
 
 addMenu({
-	route: '/pembayaran',
-    label: 'Pembayaran',
-	subMenus: []
-})
-
-addMenu({
-	route: '/programstudi',
-    label: 'Program Studi',
-	subMenus: []
-})
-
-addMenu({
 	route: '#',
-    label: 'CPL',
+    label: 'CPMK',
 	subMenus: []
 })
 
-addSubMenu('CPL', {
-	route: '/cpl',
-	label: 'CPL',
+addSubMenu('CPMK', {
+	route: '/cpmk',
+	label: 'CPMK',
 	
 })
 
-addSubMenu('CPL', {
-	route: '/cpl/laporan',
-	label: 'Laporan CPL',
+addSubMenu('CPMK', {
+	route: '/subcpmk',
+	label: 'Sub-CPMK',
+	
+})
+
+addSubMenu('CPMK', {
+	route: '/cpmk/laporan',
+	label: 'Laporan CPMK',
 	
 })
 
@@ -158,7 +152,13 @@ addMenu({
 })
 
 addMenu({
-	route: '/penilaian-kelas',
-    label: 'Penilaian Kelas',
+	route: '/kelas',
+    label: 'Kelas',
+	subMenus: []
+})
+
+addMenu({
+	route: '/programstudi',
+    label: 'Program Studi',
 	subMenus: []
 })

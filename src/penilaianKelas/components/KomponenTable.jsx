@@ -4,7 +4,7 @@
 	version 3.5.10
 */
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from "react-router";
 
 import { useAuth } from '@/commons/auth';
 import { Button, Modal } from '@/commons/components';
@@ -38,7 +38,8 @@ const KomponenTable = ({ komponenPenilaianDataList
         itemsEvents={(komponenItem) => [
           checkPermission("UpdateKomponenPenilaian") &&  (
             <Link to={`/penilaian-kelas/${id}/komponen/${komponenId}/ubah${komponenItem.kelasId}`}>
-              <Button 
+              <Button
+            	size="sm"
             	variant=
             		"primary"
               >

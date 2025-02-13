@@ -9,7 +9,7 @@ const InputField = forwardRef(function InputField(props, ref) {
   const inputVariant = INPUT_CLASSNAMES[inputStyle];
 
   return (
-    <div className="form-control">
+    <div className="form-control break-inside-avoid">
       {label && <label className="label label-text justify-start">{label} {props.isRequired && <font className='ml-1' color='red'>*</font>}</label>}
       <input
         className={`input ${inputVariant} ${fieldState?.error && "input-error"} ${className}`}

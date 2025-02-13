@@ -6,7 +6,7 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
 
 import DetailKelas from '../components/DetailKelas'
@@ -43,7 +43,8 @@ return (
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
 			  	<Link to={`/kelas
-			  	`}>	<Button className="p-4 w-full" variant="secondary">
+			  	`}>
+			  		<Button className="p-4 w-full" variant="secondary">
 			  		  Kembali
 			  		</Button>
 			  	</Link>

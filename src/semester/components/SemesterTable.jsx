@@ -4,7 +4,7 @@
 	version 3.5.10
 */
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from "react-router";
 
 import { useAuth } from '@/commons/auth';
 import { Button, Modal } from '@/commons/components';
@@ -70,7 +70,8 @@ const SemesterTable = ({ semesterDataList
         itemsEvents={(semesterItem) => [
           checkPermission("DeleteSemester") &&  (
             <Link to=''>
-              <Button 
+              <Button
+            	size="sm"
             	variant=
             				"info"
                 onClick={() => setShowModalKonfirmasiHapusSemester(true)}
@@ -84,7 +85,8 @@ const SemesterTable = ({ semesterDataList
   ,
           checkPermission("UpdateSemester") &&  (
             <Link to={`/semester/ubah?id=${semesterItem.id}`}>
-              <Button 
+              <Button
+            	size="sm"
             	variant=
             				"secondary"
               >

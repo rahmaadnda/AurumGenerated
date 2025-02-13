@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import ReactHTMLParser from "html-react-parser";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";
 
 import environment from "@/commons/utils/environment";
 import { Button } from "@/commons/components";

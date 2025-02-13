@@ -6,9 +6,9 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from "react-router";
 import FormUbahSemester from '../components/FormUbahSemester'
 
 import getSemesterData from '../services/getSemesterData'
@@ -49,12 +49,15 @@ return (
 		buttons={
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
-			  	<Link to={`/semester
-			  	`}>	<Button className="p-4" variant="secondary">
-			  		  Kembali
-			  		</Button>
-			  	</Link>
-			  	
+			  	{checkPermission("ReadLaporanCPL") &&  (
+			  	  <Link to={`/semester
+			  	  `}>
+			  	  	<Button className="p-4" variant="secondary">
+			  	  	  Kembali
+			  	  	</Button>
+			  	  </Link>
+			  	  
+			  	)}
 			  	
 			  </Layouts.ViewContainerBackButtonLayout>
 			</>

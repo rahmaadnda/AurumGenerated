@@ -1,5 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
+import daisyui from "daisyui";
+
+const config: Config = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {},
@@ -115,5 +118,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [typography, daisyui],
 };
+
+export default config;

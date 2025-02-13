@@ -6,9 +6,9 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from "react-router";
 import ModifiedFormUbahCPMK from '../components/ModifiedFormUbahCPMK'
 
 import getCPMKUbah from '../services/getCPMKUbah'
@@ -53,7 +53,9 @@ return (
 		buttons={
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
-			  	<Link to={`/cpmk/${id}`}>	<Button className="p-4" variant="secondary">
+			  	<Link to={`/cpmk/:id
+			  	`}>
+			  		<Button className="p-4" variant="secondary">
 			  		  Kembali
 			  		</Button>
 			  	</Link>

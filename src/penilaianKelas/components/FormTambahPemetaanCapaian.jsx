@@ -5,7 +5,7 @@
 */
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router";
 import {
   Button,
   Form,
@@ -72,6 +72,7 @@ const FormTambahPemetaanCapaian = ({
 		  formFields={[
 			  
 			  <Controller
+			    key="bobot"
 		        name="bobot"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -89,6 +90,7 @@ const FormTambahPemetaanCapaian = ({
 	
 		  
 		  <Controller
+		    key="komponenPenilaianId"
 	        name="komponenPenilaianId"
 	        control={control}
 	        render={({ field, fieldState }) => (
@@ -107,6 +109,7 @@ const FormTambahPemetaanCapaian = ({
 	,
 		  
 		  <Controller
+		    key="capaianId"
 	        name="capaianId"
 	        control={control}
 	        render={({ field, fieldState }) => (
@@ -125,7 +128,7 @@ const FormTambahPemetaanCapaian = ({
 		  ]}
 	
 		  itemsEvents={[
-				<Button type="submit" variant="primary">Simpan</Button>
+				<Button key="Simpan" type="submit" variant="primary">Simpan</Button>
 	    ]}
 	  />
   )

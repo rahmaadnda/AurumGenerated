@@ -6,20 +6,20 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
 import DataAkademis from '../components/DataAkademis'
 import getDetailMahasiswaDataList from '../services/getDetailMahasiswaDataList'
-import SemesterTable from '../components/SemesterTable'
+import SemesterTable from "../components/SemesterTable";
 
 import getRingkasanSemesterDataList from '../services/getRingkasanSemesterDataList'
-import NilaiTable from '../components/NilaiTable'
+import NilaiTable from "../components/NilaiTable";
 
 import getLaporanNilaiCPLDataList from '../services/getLaporanNilaiCPLDataList'
 const RingkasanAkademisPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	dataAkademis: false,

@@ -4,7 +4,7 @@
 	version 3.5.10
 */
 import React, { useContext } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link } from "react-router";
 
 import { useAuth } from '@/commons/auth';
 import { Button, Detail, VisualizationAttr, Modal, Spinner } from '@/commons/components';

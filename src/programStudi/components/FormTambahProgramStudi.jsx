@@ -5,7 +5,7 @@
 */
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router";
 import {
   Button,
   Form,
@@ -70,6 +70,7 @@ const FormTambahProgramStudi = ({
 		  formFields={[
 			  
 			  <Controller
+			    key="kode"
 		        name="kode"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -85,6 +86,7 @@ const FormTambahProgramStudi = ({
 	,
 			  
 			  <Controller
+			    key="nama"
 		        name="nama"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -100,6 +102,7 @@ const FormTambahProgramStudi = ({
 	,
 			  
 			  <Controller
+			    key="jenjang"
 		        name="jenjang"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -115,6 +118,7 @@ const FormTambahProgramStudi = ({
 	,
 			  
 			  <Controller
+			    key="noSK"
 		        name="noSK"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -130,6 +134,7 @@ const FormTambahProgramStudi = ({
 	,
 			  
 			  <Controller
+			    key="kaprodi"
 		        name="kaprodi"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -147,7 +152,7 @@ const FormTambahProgramStudi = ({
 		  ]}
 	
 		  itemsEvents={[
-				<Button type="submit" variant="primary">Tambah</Button>
+				<Button key="Tambah" type="submit" variant="primary">Tambah</Button>
 	    ]}
 	  />
   )

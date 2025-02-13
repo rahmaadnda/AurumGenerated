@@ -9,7 +9,7 @@ const SelectionField = forwardRef((props, ref) => {
   const inputVariant = INPUT_CLASSNAMES[inputStyle];
 
   return (
-    <div className="form-control" {...variant}>
+    <div className="form-control break-inside-avoid" {...variant}>
       {label && <label className="label label-text justify-start">{label} {props.isRequired && <font className='ml-1' color='red'>*</font>}</label>}
       <select
         className={`select ${inputVariant} w-full whitespace-normal ${fieldState?.error && "select-error"} ${className}`}

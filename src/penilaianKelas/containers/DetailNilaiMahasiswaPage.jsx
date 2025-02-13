@@ -6,17 +6,17 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import NilaiTable from '../components/NilaiTable'
+import NilaiTable from "../components/NilaiTable";
 
 import getNilaiMahasiswaDataList from '../services/getNilaiMahasiswaDataList'
 import DetailNilaiMahasiswa from '../components/DetailNilaiMahasiswa'
 import getPenilaianDataDetail from '../services/getPenilaianDataDetail'
 const DetailNilaiMahasiswaPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	tableNilaiMahasiswa: false,
@@ -32,7 +32,7 @@ useEffect(() => {
 		const fetchData = async () => {
 			try {
 				setIsLoading(prev => ({...prev, tableNilaiMahasiswa: true}))
-				const { data: nilaiMahasiswaDataList } = await getNilaiMahasiswaDataList({ kelasId })
+				const { data: nilaiMahasiswaDataList } = await getNilaiMahasiswaDataList({ mahasiswaId })
 				setNilaiMahasiswaDataList(nilaiMahasiswaDataList.data)
 			} finally {
 				setIsLoading(prev => ({...prev, tableNilaiMahasiswa: false}))
@@ -64,7 +64,9 @@ return (
 		buttons={
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
-			  	<Link to={`/penilaian-kelas/${id}`}>	<Button className="p-4 w-full" variant="secondary">
+			  	<Link to={`/penilaian-kelas/:id
+			  	`}>
+			  		<Button className="p-4 w-full" variant="secondary">
 			  		  Kembali
 			  		</Button>
 			  	</Link>
@@ -75,7 +77,8 @@ return (
 			  <Layouts.ViewContainerButtonLayout>
 			  	{checkPermission("CreatePenilaian") &&  (
 			  	  <Link to={`/penilaian-kelas/:id/nilai/:mahasiswaId/tambah
-			  	  `}>	<Button className="p-2 w-full" variant="primary">
+			  	  `}>
+			  	  	<Button className="p-2 w-full" variant="primary">
 			  	  	  Tambah/Edit Nilai
 			  	  	</Button>
 			  	  </Link>

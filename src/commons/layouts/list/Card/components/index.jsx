@@ -6,6 +6,7 @@ import searchItems from "@/commons/utils/Table/SearchItems";
 import SearchField from "@/commons/components/Table/SearchField";
 import filterItems from "@/commons/utils/Table/FilterItems";
 import FilterField from "@/commons/components/Table/FilterField";
+import MultiFilterField from "@/commons/components/Table/MultiFilterField";
 
 const ListComponentCardLayout = ({
   items,
@@ -30,7 +31,7 @@ const ListComponentCardLayout = ({
 
   useEffect(() => {
     setFilterTextList(
-      filterFields?.map((filterField) => ({ ...filterField, text: "" })),
+      filterFields?.map((filterField) => ({ ...filterField, text: [""] })),
     );
   }, [filterFields]);
 
@@ -51,6 +52,13 @@ const ListComponentCardLayout = ({
       {filterFields?.map(
         (filterField) =>
           filterField && (
+            filterField.isMultiSelection
+            ?
+            <MultiFilterField
+              filterField={filterField}
+              updateFilterText={updateFilterText}
+            />
+            :
             <FilterField
               filterField={filterField}
               updateFilterText={updateFilterText}

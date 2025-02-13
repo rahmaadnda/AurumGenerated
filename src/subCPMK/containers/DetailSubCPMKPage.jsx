@@ -6,7 +6,7 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
 
 import DetailSubCPMK from '../components/DetailSubCPMK'
@@ -42,14 +42,13 @@ return (
 		buttons={
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
-			  	{checkPermission("CreateRencanaStudiMe") &&  (
-			  	  <Link to={`/subcpmk
-			  	  `}>	<Button className="p-4 w-full" variant="secondary">
-			  	  	  Kembali
-			  	  	</Button>
-			  	  </Link>
-			  	  
-			  	)}
+			  	<Link to={`/subcpmk
+			  	`}>
+			  		<Button className="p-4 w-full" variant="secondary">
+			  		  Kembali
+			  		</Button>
+			  	</Link>
+			  	
 			  	
 			  </Layouts.ViewContainerBackButtonLayout>
 			</>

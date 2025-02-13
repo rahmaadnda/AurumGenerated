@@ -9,7 +9,7 @@ const TextAreaField = forwardRef(function TextAreaField(props, ref) {
   const inputVariant = INPUT_CLASSNAMES[inputStyle];
 
   return (
-    <div className="form-control">
+    <div className="form-control break-inside-avoid">
       {label && <label className="label label-text justify-start">{label} {props.isRequired && <font className='ml-1' color='red'>*</font>}</label>}
       <textarea
         className={`box-border pt-2 input ${inputVariant} ${fieldState?.error && "input-error"} ${className} h-40 resize-none`}

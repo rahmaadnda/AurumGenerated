@@ -6,17 +6,17 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
 import IRS from '../components/IRS'
 import getDetailIRSDataList from '../services/getDetailIRSDataList'
-import MataTable from '../components/MataTable'
+import MataTable from "../components/MataTable";
 
 import getMataKuliahDipilihDataList from '../services/getMataKuliahDipilihDataList'
 const LihatIRSPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	iRS: false,
@@ -65,7 +65,8 @@ return (
 			<>
 			<Layouts.ViewContainerButtonLayout>
 			  	<Link to={`
-			  	`}>	<Button className="p-2 w-full" variant="primary">
+			  	`}>
+			  		<Button className="p-2 w-full" variant="primary">
 			  		  Isi/Ubah IRS
 			  		</Button>
 			  	</Link>

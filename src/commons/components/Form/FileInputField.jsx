@@ -42,7 +42,7 @@ const FileInputField = forwardRef(function FileInputField(props, ref) {
   }
 
   return (
-    <div className="form-control">
+    <div className="form-control break-inside-avoid">
       {label && <label className="label label-text justify-start">{label} {props.isRequired && <font className='ml-1' color='red'>*</font>}</label>}
       {selectedImage && checkIsImage(selectedImage) ?
         <img

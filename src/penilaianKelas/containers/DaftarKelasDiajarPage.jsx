@@ -6,15 +6,15 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import KelasTable from '../components/KelasTable'
+import KelasTable from "../components/KelasTable";
 
 import getPenilaianKelasDataList from '../services/getPenilaianKelasDataList'
 const DaftarKelasDiajarPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	tableKelasDiajar: false,

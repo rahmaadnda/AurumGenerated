@@ -6,17 +6,17 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
 import DetailKurikulum from '../components/DetailKurikulum'
 import getKurikulumDataDetail from '../services/getKurikulumDataDetail'
-import CPLTable from '../components/CPLTable'
+import CPLTable from "../components/CPLTable";
 
 import getCPLDataList from '../services/getCPLDataList'
 const DetailKurikulumPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	detailKurikulum: false,
@@ -64,7 +64,8 @@ return (
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
 			  	<Link to={`/kurikulum
-			  	`}>	<Button className="p-4 w-full" variant="secondary">
+			  	`}>
+			  		<Button className="p-4 w-full" variant="secondary">
 			  		  Kembali
 			  		</Button>
 			  	</Link>

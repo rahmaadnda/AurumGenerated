@@ -6,17 +6,17 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import CPMKTable from '../components/CPMKTable'
+import CPMKTable from "../components/CPMKTable";
 
 import getCPMKDataList from '../services/getCPMKDataList'
 import getCPLSelectionField from '../services/getCPLSelectionField'
 import getMataKuliahSelectionField from '../services/getMataKuliahSelectionField'
 const DaftarCPMKPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	daftarCPMK: false,
@@ -55,7 +55,8 @@ return (
 			<>
 			<Layouts.ViewContainerButtonLayout>
 			  	<Link to={`/cpmk/tambah
-			  	`}>	<Button className="p-2" variant="primary">
+			  	`}>
+			  		<Button className="p-2" variant="primary">
 			  		  Tambah CPMK
 			  		</Button>
 			  	</Link>

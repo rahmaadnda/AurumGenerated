@@ -3,43 +3,13 @@ import react from "@vitejs/plugin-react-swc";
 import svgr from "vite-plugin-svgr";
 import checker from "vite-plugin-checker";
 
-const devLoadingIndicator = ({ mode }) => {
-  return {
-    name: "vite-dev-loading-indicator",
-    transformIndexHtml: (html) => {
-      if (mode === "production") {
-        return html.replace(
-          /<([a-zA-Z]+)([^>]*\sdata-dev-loading="true"[^>]*)>([\s\S]*?)<\/\1>/g,
-          ""
-        );
-      }
-    },
-    configureServer: (server) => {
-      server.middlewares.use((req, res, next) => {
-        res.on("finish", () => {
-          server.ws.send({
-            type: "custom",
-            event: "loaded",
-          });
-        });
-        next();
-      });
-    },
-  };
-};
-
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-
-  const flags = {
-    devLoadingIndicator: env.VITE_FLAGS_DEV_LOADING_INDICATOR === "true",
-  };
 
   return {
     root: "src",
     base: "/",
     plugins: [
-      ...(flags.devLoadingIndicator ? [devLoadingIndicator({ mode })] : []),
       react(),
       svgr(),
       checker({

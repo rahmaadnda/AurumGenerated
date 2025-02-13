@@ -3,7 +3,7 @@ import Menu, { MenuItem } from "../Menu";
 import Brand from "../Brand";
 import { FiLogOut } from "react-icons/fi";
 import useNavigation from "./useNavigation";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Sidebar = () => {
   const { handleLogout, isAuthenticated, navbarMenus } = useNavigation();

@@ -3,7 +3,7 @@ import AuthForgotPasswordService from '@/commons/services/AuthForgotPasswordServ
 import AuthForgotPasswordTokenService from '@/commons/services/AuthForgotPasswordTokenService'
 import React, { useState,useEffect,useContext } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router";
 import HeaderContext from '@/commons/components/Header/HeaderContext'
 
 const ForgotPasswordPage = () => {

@@ -19,7 +19,7 @@ const semesterRoutes = [
 ,
 { 
 	path: "/semester/ubah",
-	element: <RequireAuth permissionNeeded="UpdateSemester" ><UbahSemesterPage/></RequireAuth>
+	element: <RequireAuth permissionNeeded="ReadLaporanCPL" ><UbahSemesterPage/></RequireAuth>
 }
 
 	

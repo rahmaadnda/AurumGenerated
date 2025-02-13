@@ -24,8 +24,8 @@ export default function useVisualizationAttr() {
 
   const getContentType = (content) => {
     if (isArray(content)) return "array";
-    if (isImage(content)) return "image";
     if (isHTML(content)) return "html";
+    if (isImage(content)) return "image";
     return "text";
   };
 

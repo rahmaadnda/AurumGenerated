@@ -6,21 +6,21 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import KomponenTable from '../components/KomponenTable'
+import KomponenTable from "../components/KomponenTable";
 
 import getKomponenPenilaianDataList from '../services/getKomponenPenilaianDataList'
-import MahasiswaTable from '../components/MahasiswaTable'
+import MahasiswaTable from "../components/MahasiswaTable";
 
 import getMahasiswaDataList from '../services/getMahasiswaDataList'
-import PemetaanTable from '../components/PemetaanTable'
+import PemetaanTable from "../components/PemetaanTable";
 
 import getCapaianDataList from '../services/getCapaianDataList'
 const DetailPenilaianKelasPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	daftarKomponenPenilaian: false,
@@ -89,7 +89,8 @@ return (
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
 			  	<Link to={`/penilaian-kelas
-			  	`}>	<Button className="p-4" variant="secondary">
+			  	`}>
+			  		<Button className="p-4" variant="secondary">
 			  		  Kembali
 			  		</Button>
 			  	</Link>
@@ -100,7 +101,8 @@ return (
 			  <Layouts.ViewContainerButtonLayout>
 			  	{checkPermission("CreateKomponenPenilaian") &&  (
 			  	  <Link to={`/penilaian-kelas/:id/komponen/tambah
-			  	  `}>	<Button className="p-2" variant="primary">
+			  	  `}>
+			  	  	<Button className="p-2" variant="primary">
 			  	  	  Tambah Komponen Penilaian
 			  	  	</Button>
 			  	  </Link>
@@ -109,7 +111,8 @@ return (
 			  	
 			  	{checkPermission("CreateBobotKomponenPenilaian") &&  (
 			  	  <Link to={`/penilaian-kelas/:id/pemetaan-capaian/tambah
-			  	  `}>	<Button className="p-2" variant="primary">
+			  	  `}>
+			  	  	<Button className="p-2" variant="primary">
 			  	  	  Tambah/Ubah Pemetaan Capaian
 			  	  	</Button>
 			  	  </Link>

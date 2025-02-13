@@ -10,7 +10,7 @@ const MultiSelectField = forwardRef(function MultiSelectField(props, ref) {
     const inputVariant = INPUT_CLASSNAMES[inputStyle];
   
     return (
-      <div className="form-control">
+      <div className="form-control break-inside-avoid">
         {label && <label className="label label-text">{label}</label>}
         <Select
            className={`input ${inputVariant} ${fieldState?.error && "input-error"} ${className}`}

@@ -3,14 +3,13 @@
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.5.10
 */
-import RequireAuth from "@/commons/auth/RequireAuth";
 import React from 'react';
 import RingkasanAkademisPage from './containers/RingkasanAkademisPage'
 
 const ringkasanAkademisRoutes = [
 { 
 	path: "/akademis/ringkasan",
-	element: <RequireAuth permissionNeeded="ReadRencanaStudiMe" ><RingkasanAkademisPage/></RequireAuth>
+	element: <RingkasanAkademisPage />,
 }
 
 	

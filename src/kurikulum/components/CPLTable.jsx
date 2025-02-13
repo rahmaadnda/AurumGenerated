@@ -4,7 +4,7 @@
 	version 3.5.10
 */
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from "react-router";
 
 import { useAuth } from '@/commons/auth';
 import { Button, Modal } from '@/commons/components';
@@ -53,7 +53,8 @@ const CPLTable = ({ cPLDataList
   	  ]}
         itemsEvents={(cPLItem) => [
           <Link to=''>
-            <Button 
+            <Button
+          	size="sm"
           	variant=
           				"secondary"
             >

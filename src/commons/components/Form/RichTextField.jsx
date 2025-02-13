@@ -31,7 +31,7 @@ const RichTextField = forwardRef(function RichTextField(props, ref) {
               },
             ],
             ["bold", "italic", "underline", "strike", "clean"],
-            ["link", "image", "video"],
+            ["link", "image"],
             [{ list: "ordered" }, { list: "bullet" }, { align: [] }],
           ],
         },
@@ -39,7 +39,7 @@ const RichTextField = forwardRef(function RichTextField(props, ref) {
     });
     ref.current = quill;
     quill.on("text-change", () => {
-      onChange?.(quill.root.innerHTML);
+      onChange?.(quill.getSemanticHTML());
     });
     return () => {
       ref.current = null;
@@ -48,7 +48,7 @@ const RichTextField = forwardRef(function RichTextField(props, ref) {
   }, [ref]);
 
   return (
-    <div className="form-control">
+    <div className="form-control break-inside-avoid">
       {label && (
         <label className="label label-text justify-start">
           {label}{" "}

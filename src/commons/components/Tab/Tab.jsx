@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router";
 import { sizes } from "./variant";
 
 const Tab = ({ tabs, id, size = "md" }) => {

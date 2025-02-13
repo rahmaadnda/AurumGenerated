@@ -5,7 +5,7 @@
 */
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router";
 import {
   Button,
   Form,
@@ -71,6 +71,7 @@ const ModifiedFormTambahSubCPMK = ({
 		  formFields={[
 			  
 			  <Controller
+			    key="kode"
 		        name="kode"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -86,6 +87,7 @@ const ModifiedFormTambahSubCPMK = ({
 	,
 			  
 			  <Controller
+			    key="deskripsi"
 		        name="deskripsi"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -101,6 +103,7 @@ const ModifiedFormTambahSubCPMK = ({
 	,
 			  
 			  <Controller
+			    key="bobot"
 		        name="bobot"
 		        control={control}
 		        render={({ field, fieldState }) => (
@@ -118,6 +121,7 @@ const ModifiedFormTambahSubCPMK = ({
 	
 		  
 		  <Controller
+		    key="idParentCPMK"
 	        name="idParentCPMK"
 	        control={control}
 	        render={({ field, fieldState }) => (
@@ -135,7 +139,7 @@ const ModifiedFormTambahSubCPMK = ({
 		  ]}
 	
 		  itemsEvents={[
-				<Button type="submit" variant="primary">Tambah</Button>
+				<Button key="Tambah" type="submit" variant="primary">Tambah</Button>
 	    ]}
 	  />
   )

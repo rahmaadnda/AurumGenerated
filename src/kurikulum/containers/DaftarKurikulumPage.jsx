@@ -6,15 +6,15 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import KurikulumTable from '../components/KurikulumTable'
+import KurikulumTable from "../components/KurikulumTable";
 
 import getKurikulumDataList from '../services/getKurikulumDataList'
 const DaftarKurikulumPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	daftarKurikulum: false,
@@ -48,7 +48,8 @@ return (
 			<Layouts.ViewContainerButtonLayout>
 			  	{checkPermission("CreateKurikulum") &&  (
 			  	  <Link to={`/kurikulum/tambah
-			  	  `}>	<Button className="p-2" variant="primary">
+			  	  `}>
+			  	  	<Button className="p-2" variant="primary">
 			  	  	  Tambah Kurikulum
 			  	  	</Button>
 			  	  </Link>

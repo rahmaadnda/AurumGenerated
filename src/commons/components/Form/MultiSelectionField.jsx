@@ -51,7 +51,7 @@ const MultiSelectionField = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="form-control" {...variant}>
+    <div className="form-control break-inside-avoid" {...variant}>
       {label && <label className="label font-bold uppercase">{label}</label>}
       {options &&
         value !== undefined &&

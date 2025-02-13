@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router";
 
 const Brand = ({ onCLick, isMobileFirst }) => {
   const className = 'btn-ghost normal-case text-xl' + (isMobileFirst ? ' p-0 no-underline font-semibold' : ' btn')
@@ -10,7 +10,7 @@ const Brand = ({ onCLick, isMobileFirst }) => {
       onClick={onCLick}
       className={className}
     >
-      AurumGenerated
+      Aurumgenerated
     </Link>
   )
 }

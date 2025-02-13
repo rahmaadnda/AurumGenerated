@@ -6,15 +6,15 @@
 import React, { useEffect, useState, useContext} from 'react'
 import { Button, Spinner } from "@/commons/components"
 import * as Layouts from '@/commons/layouts';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import StudiTable from '../components/StudiTable'
+import StudiTable from "../components/StudiTable";
 
 import getProgramStudiDataList from '../services/getProgramStudiDataList'
 const DaftarProgramStudiPage = props => {
-const { checkPermission } = useAuth()
+const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
 	programStudi: false,
@@ -48,7 +48,8 @@ return (
 			<Layouts.ViewContainerButtonLayout>
 			  	{checkPermission("CreateProgramStudi") &&  (
 			  	  <Link to={`/programstudi/tambah
-			  	  `}>	<Button className="p-2" variant="primary">
+			  	  `}>
+			  	  	<Button className="p-2" variant="primary">
 			  	  	  Tambah Program Studi
 			  	  	</Button>
 			  	  </Link>
