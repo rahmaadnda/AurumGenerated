@@ -38,44 +38,50 @@ export const settingsMenu = [
   
 export default menus
 addMenu({
-	route: '/penilaian-kelas',
-    label: 'Penilaian Kelas',
+	route: '#',
+    label: 'IRS',
 	subMenus: []
 })
 
-addMenu({
-	route: '/kurikulum',
-    label: 'Kurikulum',
-	subMenus: []
+addSubMenu('IRS', {
+	route: '/irs/ringkasan',
+	label: 'Lihat IRS',
+	
+})
+
+addSubMenu('IRS', {
+	route: '/irs/isi',
+	label: 'Isi/Ubah IRS',
+	
+})
+
+addSubMenu('IRS', {
+	route: '/irs/pengaturan',
+	label: 'Pengaturan Pengisian IRS',
+	
 })
 
 addMenu({
 	route: '#',
-    label: 'CPMK',
+    label: 'Akademis',
 	subMenus: []
 })
 
-addSubMenu('CPMK', {
-	route: '/cpmk',
-	label: 'CPMK',
+addSubMenu('Akademis', {
+	route: '/akademis/ringkasan',
+	label: 'Ringkasan',
 	
 })
 
-addSubMenu('CPMK', {
-	route: '/subcpmk',
-	label: 'Sub-CPMK',
-	
-})
-
-addSubMenu('CPMK', {
-	route: '/cpmk/laporan',
-	label: 'Laporan CPMK',
+addSubMenu('Akademis', {
+	route: '/akademis/riwayat',
+	label: 'Riwayat',
 	
 })
 
 addMenu({
-	route: '/semester',
-    label: 'Semester',
+	route: '/pembayaran',
+    label: 'Pembayaran',
 	subMenus: []
 })
 
@@ -86,8 +92,14 @@ addMenu({
 })
 
 addMenu({
-	route: '/matakuliah',
-    label: 'Mata Kuliah',
+	route: '/semester',
+    label: 'Semester',
+	subMenus: []
+})
+
+addMenu({
+	route: '/penilaian-kelas',
+    label: 'Penilaian Kelas',
 	subMenus: []
 })
 
@@ -116,49 +128,37 @@ addMenu({
 })
 
 addMenu({
-	route: '#',
-    label: 'Akademis',
+	route: '/matakuliah',
+    label: 'Mata Kuliah',
 	subMenus: []
-})
-
-addSubMenu('Akademis', {
-	route: '/akademis/ringkasan',
-	label: 'Ringkasan',
-	
-})
-
-addSubMenu('Akademis', {
-	route: '/akademis/riwayat',
-	label: 'Riwayat',
-	
 })
 
 addMenu({
 	route: '#',
-    label: 'IRS',
+    label: 'CPMK',
 	subMenus: []
 })
 
-addSubMenu('IRS', {
-	route: '/irs/ringkasan',
-	label: 'Lihat IRS',
+addSubMenu('CPMK', {
+	route: '/cpmk',
+	label: 'CPMK',
 	
 })
 
-addSubMenu('IRS', {
-	route: '/irs/isi',
-	label: 'Isi/Ubah IRS',
+addSubMenu('CPMK', {
+	route: '/subcpmk',
+	label: 'Sub-CPMK',
 	
 })
 
-addSubMenu('IRS', {
-	route: '/irs/pengaturan',
-	label: 'Pengaturan Pengisian IRS',
+addSubMenu('CPMK', {
+	route: '/cpmk/laporan',
+	label: 'Laporan CPMK',
 	
 })
 
 addMenu({
-	route: '/pembayaran',
-    label: 'Pembayaran',
+	route: '/kurikulum',
+    label: 'Kurikulum',
 	subMenus: []
 })

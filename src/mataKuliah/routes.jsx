@@ -3,6 +3,7 @@
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.5.10
 */
+import RequireAuth from "@/commons/auth/RequireAuth";
 import React from 'react';
 import TambahMataKuliahPage from './containers/TambahMataKuliahPage'
 import DaftarMataKuliahPage from './containers/DaftarMataKuliahPage'
@@ -12,7 +13,7 @@ import UbahMataKuliahPage from './containers/UbahMataKuliahPage'
 const mataKuliahRoutes = [
 { 
 	path: "/matakuliah/tambah",
-	element: <TambahMataKuliahPage />,
+	element: <RequireAuth permissionNeeded="ReadRencanaStudiMe" ><TambahMataKuliahPage/></RequireAuth>
 }
 
 	
