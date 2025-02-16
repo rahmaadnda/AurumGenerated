@@ -20,7 +20,7 @@ const kurikulumRoutes = [
 ,
 { 
 	path: "/kurikulum/ubah",
-	element: <RequireAuth permissionNeeded="UpdateKurikulum" ><UbahKurikulumPage/></RequireAuth>
+	element: <RequireAuth permissionNeeded="ReadLaporanCPMK" ><UbahKurikulumPage/></RequireAuth>
 }
 
 	

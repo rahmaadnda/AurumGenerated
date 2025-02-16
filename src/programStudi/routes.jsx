@@ -20,7 +20,7 @@ const programStudiRoutes = [
 ,
 { 
 	path: "/programstudi/ubah",
-	element: <RequireAuth permissionNeeded="ReadLaporanCPMK" ><UbahProgramStudiPage/></RequireAuth>
+	element: <RequireAuth permissionNeeded="UpdateProgramStudi" ><UbahProgramStudiPage/></RequireAuth>
 }
 
 	

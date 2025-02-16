@@ -32,7 +32,7 @@ useEffect(() => {
 		const fetchData = async () => {
 			try {
 				setIsLoading(prev => ({...prev, tableNilaiMahasiswa: true}))
-				const { data: nilaiMahasiswaDataList } = await getNilaiMahasiswaDataList({ mahasiswaId })
+				const { data: nilaiMahasiswaDataList } = await getNilaiMahasiswaDataList({ kelasId })
 				setNilaiMahasiswaDataList(nilaiMahasiswaDataList.data)
 			} finally {
 				setIsLoading(prev => ({...prev, tableNilaiMahasiswa: false}))
