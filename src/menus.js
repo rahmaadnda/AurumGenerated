@@ -38,87 +38,15 @@ export const settingsMenu = [
   
 export default menus
 addMenu({
-	route: '/kurikulum',
-    label: 'Kurikulum',
-	subMenus: []
-})
-
-addMenu({
-	route: '/pembayaran',
-    label: 'Pembayaran',
-	subMenus: []
-})
-
-addMenu({
-	route: '#',
-    label: 'Akademis',
-	subMenus: []
-})
-
-addSubMenu('Akademis', {
-	route: '/akademis/ringkasan',
-	label: 'Ringkasan',
-	
-})
-
-addSubMenu('Akademis', {
-	route: '/akademis/riwayat',
-	label: 'Riwayat',
-	
-})
-
-addMenu({
 	route: '/penilaian-kelas',
     label: 'Penilaian Kelas',
 	subMenus: []
 })
 
 addMenu({
-	route: '/matakuliah',
-    label: 'Mata Kuliah',
+	route: '/kurikulum',
+    label: 'Kurikulum',
 	subMenus: []
-})
-
-addMenu({
-	route: '#',
-    label: 'CPL',
-	subMenus: []
-})
-
-addSubMenu('CPL', {
-	route: '/cpl',
-	label: 'CPL',
-	
-})
-
-addSubMenu('CPL', {
-	route: '/cpl/laporan',
-	label: 'Laporan CPL',
-	
-})
-
-addMenu({
-	route: '#',
-    label: 'IRS',
-	subMenus: []
-})
-
-addSubMenu('IRS', {
-	route: '/irs/ringkasan',
-	label: 'Lihat IRS',
-	
-})
-
-addSubMenu('IRS', {
-	route: '/irs/isi',
-	label: 'Isi/Ubah IRS',
-	
-})
-
-addSubMenu('IRS', {
-	route: '/irs/pengaturan',
-	label: 'Pengaturan Pengisian IRS',
-	
 })
 
 addMenu({
@@ -152,13 +80,85 @@ addMenu({
 })
 
 addMenu({
+	route: '/programstudi',
+    label: 'Program Studi',
+	subMenus: []
+})
+
+addMenu({
+	route: '/matakuliah',
+    label: 'Mata Kuliah',
+	subMenus: []
+})
+
+addMenu({
+	route: '#',
+    label: 'CPL',
+	subMenus: []
+})
+
+addSubMenu('CPL', {
+	route: '/cpl',
+	label: 'CPL',
+	
+})
+
+addSubMenu('CPL', {
+	route: '/cpl/laporan',
+	label: 'Laporan CPL',
+	
+})
+
+addMenu({
 	route: '/kelas',
     label: 'Kelas',
 	subMenus: []
 })
 
 addMenu({
-	route: '/programstudi',
-    label: 'Program Studi',
+	route: '#',
+    label: 'Akademis',
+	subMenus: []
+})
+
+addSubMenu('Akademis', {
+	route: '/akademis/ringkasan',
+	label: 'Ringkasan',
+	
+})
+
+addSubMenu('Akademis', {
+	route: '/akademis/riwayat',
+	label: 'Riwayat',
+	
+})
+
+addMenu({
+	route: '#',
+    label: 'IRS',
+	subMenus: []
+})
+
+addSubMenu('IRS', {
+	route: '/irs/ringkasan',
+	label: 'Lihat IRS',
+	
+})
+
+addSubMenu('IRS', {
+	route: '/irs/isi',
+	label: 'Isi/Ubah IRS',
+	
+})
+
+addSubMenu('IRS', {
+	route: '/irs/pengaturan',
+	label: 'Pengaturan Pengisian IRS',
+	
+})
+
+addMenu({
+	route: '/pembayaran',
+    label: 'Pembayaran',
 	subMenus: []
 })

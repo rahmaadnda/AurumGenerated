@@ -49,7 +49,7 @@ return (
 		buttons={
 			<>
 			<Layouts.ViewContainerBackButtonLayout>
-			  	{checkPermission("ReadLaporanCPL") &&  (
+			  	{checkPermission("CreateRencanaStudiMe") &&  (
 			  	  <Link to={`/semester
 			  	  `}>
 			  	  	<Button className="p-4" variant="secondary">

@@ -41,12 +41,12 @@ useEffect(() => {
 		fetchData()	
   	}, [])
 const [penilaianDataDetail, setPenilaianDataDetail] = useState()
-const { mahasiswaId } = useParams()
+const { kelasId } = useParams()
 useEffect(() => {
 	const fetchData = async () => {
 		try {
 			setIsLoading(prev => ({...prev, detailNilaiMahasiswa: true}))
-			const { data: penilaianDataDetail } = await getPenilaianDataDetail({ mahasiswaId })
+			const { data: penilaianDataDetail } = await getPenilaianDataDetail({ kelasId })
 			setPenilaianDataDetail(penilaianDataDetail.data)
 		} finally {
 			setIsLoading(prev => ({...prev, detailNilaiMahasiswa: false}))
