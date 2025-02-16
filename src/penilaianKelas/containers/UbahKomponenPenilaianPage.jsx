@@ -20,14 +20,14 @@ const [isLoading, setIsLoading] = useState({
 	const { setTitle } = useContext(HeaderContext);
 
 const [searchParams] = useSearchParams()
-const id = searchParams.get('id')
 const kelasId = searchParams.get('kelasId')
+const id = searchParams.get('id')
 const [komponenPenilaianUbah, setKomponenPenilaianUbah] = useState()
 
 useEffect(() => {
     const fetch = async () => {
 	  setIsLoading(prev => ({...prev, ubahKomponenPenilaian: true}))
-		const { data: komponenPenilaianUbahResponse } = await getKomponenPenilaianUbah({ id  })
+		const { data: komponenPenilaianUbahResponse } = await getKomponenPenilaianUbah({ kelasId  })
 
 	    setKomponenPenilaianUbah(komponenPenilaianUbahResponse.data)
 

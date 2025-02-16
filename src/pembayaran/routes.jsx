@@ -3,7 +3,8 @@
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.5.10
 */
-import React from 'react';
+import RequireAuth from '@/commons/auth/RequireAuth'
+
 import FormPembayaranPage from './containers/FormPembayaranPage'
 
 const pembayaranRoutes = [

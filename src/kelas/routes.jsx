@@ -34,7 +34,7 @@ const kelasRoutes = [
 ,
 { 
 	path: "/kelas/:id",
-	element: <RequireAuth permissionNeeded="ReadLaporanCPL" ><DetailKelasPage/></RequireAuth>
+	element: <DetailKelasPage />,
 }
 
 	
